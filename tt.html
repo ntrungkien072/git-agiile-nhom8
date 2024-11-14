@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Trang Chủ</title>
+</head>
+
+<body>
+  <h1>Trang Chủ</h1>
+
+  <script>
+    // Lấy thông tin đăng nhập từ localStorage
+    var username = localStorage.getItem('username');
+    if (username) {
+      console.log('Tài khoản đăng nhập:', username);
+    } else {
+      // Nếu không có thông tin đăng nhập, chuyển hướng người dùng đến trang đăng nhập
+      window.location.href = 'login.html';
+    }
+  </script>
+</body>
+
+</html>
