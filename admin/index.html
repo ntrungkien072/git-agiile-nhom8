@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Nhúng Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+    <script src="/lib/bootstrap.js"></script>
+
+    <!-- Nhúng Font Icon -->
+    <script src="/lib/font-fontawesome-ae333ffef2.js"></script>
+
+
+
+    <!-- Nhúng AngularJS -->
+    <script src="/lib/angular.js"></script>
+    <script src="/lib/angular-route.js"></script>
+    <script src="controller/fill.js"></script>
+    <script src="controller/add.js"></script>
+    <script src="controller/update.js"></script>
+    <script src="controller/fills.js"></script>
+    <script src="controller/adds.js"></script>
+    <script src="controller/updates.js"></script>
+    <script src="controller/login.js"></script>
+    <script src="controller/fillproduct.js"></script>
+    <script src="controller/chitiet.js"></script>
+    <script src="controller/donhang.js"></script>
+    <script src="controller/donhangg.js"></script>
+    <script src="controller/phanquyen.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-cookies/1.8.3/angular-cookies.min.js"
+        integrity="sha512-eM4WApD53FS2pv6fIgY4E2utWB82WSp3QPeoemIzA9VeOv9vQ1UzYBKIkXAwS71SCilEFpfkwtCZHj2uSS3keQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-cookies/1.8.3/angular-cookies.js"
+        integrity="sha512-ZHJPZdtNy97ocWvmz1mp86vw2LIDczWf48WITpd+Z/jJQszhUURAmeV4LFxPwxyTt1ZcetHg1t5YubeYpti72Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="controller/index.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <div class="container-fluid">
+        <div class="" ng-include="'../layout/_header.html'"></div>
+        <div class="" ng-view></div>
+        <div class="" ng-include="'../layout/_footer.html'"></div>
+    </div>
+
+    <script>
+        var myApp = angular.module("myApp", ["ngRoute", "ngCookies"])
+        myApp.config(function ($routeProvider) {
+            $routeProvider
+                .when("/", {
+                    templateUrl: "view/trangchu.html"
+                })
+                .when("/trang-chu", {
+                    templateUrl: "view/trangchu.html",
+                    controller: phanquyen
+                })
+                .when("/san-pham", {
+                    templateUrl: "view/sanpham.html",
+                    controller: fillproduct
+                })
+                .when("/admin", {
+                    templateUrl: "view/admin.html"
+                })
+                .when("/qlsp", {
+                    templateUrl: "view/qlsp.html",
+                    controller: fill
+                })
+                .when("/qlnd", {
+                    templateUrl: "view/qlnd.html",
+                    controller: fills
+                })
+                .when("/them", {
+                    templateUrl: "view/add.html",
+                    controller: add
+                })
+                .when("/sua/:id", {
+                    templateUrl: "view/update.html",
+                    controller: update
+                })
+                .when("/add", {
+                    templateUrl: "views/add.html",
+                    controller: adds
+                })
+                .when("/update/:id", {
+                    templateUrl: "views/update.html",
+                    controller: updates
+                })
+                .when("/login", {
+                    templateUrl: "view/login.html",
+                    controller: login
+                })
+                .when("/trang-nguoi-dung", {
+                    templateUrl: "view/donhang.html",
+                    controller: donhang
+                })
+                .when("/hd", {
+                    templateUrl: "view/donhangg.html",
+                    controller: donhangg
+                })
+                .when("/in-dex", {
+                    templateUrl: "index.html",
+                    controller: index
+                })
+                .when("/chi-tiet/:id", {
+                    templateUrl: "ctsp.html",
+                    controller: chitiet
+                });
+        });
+        
+    </script>
+</body>
+
+</html>

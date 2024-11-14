@@ -1,0 +1,229 @@
+{
+  "sanpham": [
+    {
+      "id": "2",
+      "ten": "Ak47",
+      "loai": "Súng trường",
+      "card": 20000,
+      "atm": 12000,
+      "anh": "https://i.ytimg.com/vi/qNw1C3zPjXE/maxresdefault.jpg",
+      "anhct": [
+        "https://i.ytimg.com/vi/wQGw9ejRcWY/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/wQGw9ejRcWY/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/qNw1C3zPjXE/maxresdefault.jpg"
+      ],
+      "idtao": "1"
+    },
+    {
+      "id": "3",
+      "ten": "Scar",
+      "loai": "Súng trường",
+      "card": 20000,
+      "atm": 12000,
+      "anh": "https://i.ytimg.com/vi/06G0eVdrAl4/sddefault.jpg",
+      "anhct": [
+        "https://i.ytimg.com/vi/wQGw9ejRcWY/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/wQGw9ejRcWY/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/qNw1C3zPjXE/maxresdefault.jpg"
+      ],
+      "idtao": "1"
+    },
+    {
+      "id": "4",
+      "ten": "Mp40",
+      "loai": "Tiểu liên",
+      "card": 20000,
+      "atm": 12000,
+      "anh": "https://i.ytimg.com/vi/wQGw9ejRcWY/maxresdefault.jpg",
+      "anhct": [
+        "https://i.ytimg.com/vi/wQGw9ejRcWY/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/wQGw9ejRcWY/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/qNw1C3zPjXE/maxresdefault.jpg"
+      ],
+      "idtao": "1"
+    },
+    {
+      "id": "11",
+      "ten": "Mp40",
+      "loai": "Tiểu liên",
+      "card": 20000,
+      "atm": 12000,
+      "anh": "https://pbs.twimg.com/media/FpW7PWhaQAEZufO.png",
+      "anhct": [
+        "https://i.ytimg.com/vi/wQGw9ejRcWY/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/wQGw9ejRcWY/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/qNw1C3zPjXE/maxresdefault.jpg"
+      ],
+      "idtao": "1"
+    },
+    {
+      "id": "12",
+      "ten": "Mp40",
+      "loai": "Tiểu liên",
+      "card": 20000,
+      "atm": 12000,
+      "anh": "https://i.ytimg.com/vi/CdOUevmsuJc/maxresdefault.jpg",
+      "anhct": [
+        "https://i.ytimg.com/vi/wQGw9ejRcWY/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/wQGw9ejRcWY/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/qNw1C3zPjXE/maxresdefault.jpg"
+      ],
+      "idtao": "1"
+    },
+    {
+      "id": "2255",
+      "ten": "sksis",
+      "loai": "kkien",
+      "card": 11111,
+      "atm": 11111,
+      "anh": "https://i.ytimg.com/vi/wQGw9ejRcWY/maxresdefault.jpg",
+      "anhct": [],
+      "idtao": "9586"
+    }
+  ],
+  "nguoidung": [
+    {
+      "id": "1",
+      "ten": "Lê Anh Nuôi",
+      "taikhoan": "1",
+      "matkhau": "1",
+      "chucvu": "1"
+    },
+    {
+      "id": "ac88",
+      "ten": "2",
+      "taikhoan": "7",
+      "matkhau": "2",
+      "chucvu": "2"
+    },
+    {
+      "id": "40d7",
+      "ten": "3",
+      "taikhoan": "3",
+      "matkhau": "3",
+      "chucvu": "2"
+    },
+    {
+      "id": "9433",
+      "ten": "QuangNguyen",
+      "taikhoan": "quang",
+      "matkhau": "1",
+      "vaitro": "",
+      "chucvu": "1"
+    }
+  ],
+  "donhang": [
+    {
+      "id": "1",
+      "tensung": "Mp40",
+      "gia": "30.000",
+      "trangthai": "Đã huỷ",
+      "idkhachhang": "ac88",
+      "idgame": "1234567"
+    },
+    {
+      "id": "2",
+      "tensung": "Mp40",
+      "gia": "30.000",
+      "trangthai": "Thành công",
+      "idkhachhang": "d407",
+      "idgame": "1234567"
+    },
+    {
+      "id": "3",
+      "tensung": "Mp40",
+      "gia": "30.000",
+      "trangthai": "Thành công",
+      "idkhachhang": "ac88",
+      "idgame": "1234567"
+    },
+    {
+      "id": "345",
+      "tensung": "Mp40",
+      "gia": "30.000",
+      "trangthai": "Chờ xử lý",
+      "idkhachhang": "ac88",
+      "idgame": "1234567"
+    },
+    {
+      "id": "8612",
+      "tensung": "Mp40",
+      "gia": "30.000",
+      "trangthai": "Đã huỷ",
+      "idkhachhang": "ac88",
+      "idgame": "666"
+    },
+    {
+      "id": "0aea",
+      "tensung": "Ak47",
+      "gia": "30.000",
+      "trangthai": "Đã huỷ",
+      "idkhachhang": "ac88",
+      "idgame": "999"
+    },
+    {
+      "id": "8188",
+      "tensung": "Mp40",
+      "gia": 20000,
+      "trangthai": "Chờ xử lý",
+      "idkhachhang": "40d7",
+      "idgame": "7741"
+    },
+    {
+      "id": "4806",
+      "tensung": "Mp40",
+      "gia": 20000,
+      "trangthai": "Đã huỷ",
+      "idkhachhang": "40d7",
+      "idgame": "98777"
+    },
+    {
+      "id": "67a7",
+      "tensung": "Mp40",
+      "gia": 20000,
+      "trangthai": "Thành công",
+      "idkhachhang": "40d7",
+      "idgame": "9999111"
+    },
+    {
+      "id": "4dde",
+      "tensung": "Mp40",
+      "gia": 20000,
+      "trangthai": "Chờ xử lý",
+      "idkhachhang": "40d7",
+      "idgame": "999999"
+    },
+    {
+      "id": "b7f2",
+      "tensung": "Mp40",
+      "gia": 20000,
+      "trangthai": "Đã huỷ",
+      "idkhachhang": "ac88",
+      "idgame": "123"
+    },
+    {
+      "id": "f446",
+      "tensung": "123",
+      "gia": 123456,
+      "trangthai": "Thành công",
+      "idkhachhang": "9433",
+      "idgame": "12345"
+    },
+    {
+      "id": "f369",
+      "tensung": "Mp40",
+      "gia": 20000,
+      "trangthai": "Thành công",
+      "idkhachhang": "ac88",
+      "idgame": "87654"
+    },
+    {
+      "id": "f385",
+      "tensung": "Ak47",
+      "gia": 20000,
+      "trangthai": "Thành công",
+      "idkhachhang": "1",
+      "idgame": "1"
+    }
+  ]
+}

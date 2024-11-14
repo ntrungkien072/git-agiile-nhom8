@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Nhúng Bootstrap -->
+    <link rel="stylesheet" href="/lib/bootstrap.css">
+    <script src="/lib/bootstrap.js"></script>
+
+    <!-- Nhúng Font Icon -->
+    <script src="/lib/font-fontawesome-ae333ffef2.js"></script>
+
+    <!-- Nhúng AngularJS -->
+    <script src="/lib/angular.js"></script>
+    <script src="/lib/angular-route.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-cookies/1.8.3/angular-cookies.min.js"
+        integrity="sha512-eM4WApD53FS2pv6fIgY4E2utWB82WSp3QPeoemIzA9VeOv9vQ1UzYBKIkXAwS71SCilEFpfkwtCZHj2uSS3keQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-cookies/1.8.3/angular-cookies.js"
+        integrity="sha512-ZHJPZdtNy97ocWvmz1mp86vw2LIDczWf48WITpd+Z/jJQszhUURAmeV4LFxPwxyTt1ZcetHg1t5YubeYpti72Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        input {
+            width: 100%;
+            text-indent: 10px;
+            height: 40px;
+        }
+
+        #log {
+            width: 400px;
+            margin: 0 auto;
+            box-shadow: 5px 5px 5px rgb(155, 130, 130);
+            margin-top: 200px;
+        }
+    </style>
+</head>
+
+<body ng-app="myApp">
+    <div class="container">
+        <div class="card p-5 text-center" id="log">
+            <div class="card-body" ng-controller="abc">
+                <form action="" >
+                    <input type="text" ng-model="user.taikhoan" name="" id="" placeholder="Tài khoản"> <br>
+                <input type="text" ng-model="user.matkhau" name="" id="" class="mt-3" placeholder="Mật khẩu">
+                <br>
+                <a href=""><button type="submit" ng-click="login()">Đăng nhập</button></a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var myApp = angular.module("myApp", ["ngRoute", "ngCookies"])
+        myApp.controller("abc", function ($scope, $http, $location, $rootScope, $window, $cookies) {
+            var url = "http://localhost:3000/nguoidung"
+            var id = undefined
+            $scope.user = {};
+            $scope.login = function () {
+                $http.get(url)
+                    .then(function (response) {
+                        var users = response.data;
+                        console.log(users)
+                        var authenticatedUser = users.find(function (user) {
+                            return user.taikhoan === $scope.user.taikhoan && user.matkhau === $scope.user.matkhau;
+                        });
+                       
+
+                        if (authenticatedUser) {
+                            // Xác định loại người dùng
+                            if (authenticatedUser.chucvu === '1') {
+                                // Đăng nhập thành công với quyền admin
+                                alert('Đăng nhập thành công với quyền admin.html');
+
+                                $rootScope.currentUser = authenticatedUser.id
+                                
+                                console.log(authenticatedUser.id)
+                                $location.path("/trang-chu")
+                            } else {
+                                // Đăng nhập thành công với quyền khách hàng
+                                $location.path("/trang-chu")
+                                alert('Đăng nhập thành công với quyền khách hàng!');
+                                $rootScope.currentUser = authenticatedUser.id
+                                console.log(authenticatedUser.id)
+                            }
+                        } else {
+                            // Sai tên đăng nhập hoặc mật khẩu
+                            alert("Sai tên đăng nhập hoặc mật khẩu.")
+                        }
+                    }, function (error) {
+                        // Xử lý lỗi khi tải db.json
+                        alert("Sai tài khoản hoặc mật khẩu")
+                    });
+            };
+        })
+    </script>
+
+
+</body>
+
+</html>

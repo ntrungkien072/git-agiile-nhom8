@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Nhúng Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+    <script src="/lib/bootstrap.js"></script>
+
+    <!-- Nhúng Font Icon -->
+    <script src="/lib/font-fontawesome-ae333ffef2.js"></script>
+
+    <!-- Nhúng AngularJS -->
+    <script src="/lib/angular.js"></script>
+    <script src="/lib/angular-route.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <div class="container-fluid">
+        <div class="" ng-view></div>
+    </div>
+
+    <script>
+        var myApp = angular.module("myApp", ["ngRoute"])
+        myApp.config(function ($routeProvider) {
+            $routeProvider
+                .when("/", {
+                    templateUrl: "view/trangchu.html"
+                });      
+        });
+    </script>
+</body>
+
+</html>

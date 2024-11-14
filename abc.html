@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Nhúng Bootstrap -->
+    <link rel="stylesheet" href="../lib/bootstrap.css">
+    <script src="../lib/bootstrap.js"></script>
+
+    <!-- Nhúng Font Icon -->
+    <script src="../lib/font-fontawesome-ae333ffef2.js"></script>
+
+    <!-- Nhúng AngularJS -->
+    <script src="../lib/angular.js"></script>
+    <script src="../lib/angular-route.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <div class="container-fluid">
+        <div ng-controller="MyController">
+            <input type="text" ng-model="img">
+            <button multiple ng-click="add()">Tải lên ảnh</button>
+        </div>
+    </div>
+
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller('MyController', function ($scope, $http, $rootScope) {
+            var url = "http://localhost:3000/sanpham/1"
+            $scope.img = []
+            $http.get(url)
+                .then(function (response) {
+                    $scope.ab = response.data.anhct
+                    $rootScope.abc = response.data.anhct
+                })
+            $scope.add = function () {
+                var newimg = angular.copy($scope.img)
+                console.log(newimg)
+                $rootScope.abc.push(newimg)
+                console.log($rootScope.abc)
+                $http.patch(url, {anhct : $rootScope.abc})
+                    .then(function (response) {
+                        alert("Thành công")
+                    })
+            }
+
+        });
+    </script>
+</body>
+
+</html>
